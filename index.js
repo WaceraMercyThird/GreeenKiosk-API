@@ -1,3 +1,4 @@
+
 // lib.js
 var lib = {
     square: function (x) {
@@ -14,7 +15,7 @@ var lib = require('./lib.js')
 console.log(lib.square(5)); // 25
 console.log(lib.sum(4, 3)); // 7
 
-var http = require('http'); // 1 - Import Node.js core module;
+var http = require('http://localhost5000/product'); // 1 - Import Node.js core module;
 var server = http.createServer(function (req,
 res) {
 // 2 - creating server
@@ -24,7 +25,7 @@ server.listen(5000); //3 - listen for any incoming requests
 console.log('Node.js web server at port 5000 is running..')
 
 // server.js
-var http = require('http'); // Import Node.js core module
+var http = require("http://localhost5000/product"); // Import Node.js core module
 var GreensKiosk = require('./GreensKiosk');
 
     // create web server
@@ -60,58 +61,9 @@ var GreensKiosk = require('./GreensKiosk');
 
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.write(JSON.stringify(GreensKiosk.getItems('vegetables')))};
-// GreensKiosk.js
-let products = [
-    {
-    name: 'Mangoes',
-    category: 'fruits'
-    },
-    {
-    name: 'Apples',
-    category: 'fruits'
-    },
-    {
-    name: 'Bananas',
-    category: 'fruits'
-    },
-    {
-    name: 'Oranges',
-    category: 'fruits'
-    },
-    {
-    name: 'Grapes',
-    category: 'fruits'
-    },
-    {
-    name: 'Kales',
-    category: 'vegetables'
-    },
-    {
-    name: 'Onions',
-    category: 'vegetables'
-    },
-    {
-    name: 'Tomatoes',
-    category: 'vegetables'
-    },
-    {
-    name: 'Cabbages',
-    category: 'vegetables'
-    }];
+
+    
+   
 
 
-function getItems(category) {
-    if (category) {
-        let filteredProducts = products.filter(item => {
-            return item.category === category;
-        });
-        return filteredProducts;
-    }
-    return products;
-    }
-    
-    GreensKiosk = {
-    getItems: getItems
-    };
-    
-    module.exports = GreensKiosk;
+   
